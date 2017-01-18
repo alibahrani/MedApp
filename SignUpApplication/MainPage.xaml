@@ -7,7 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#242e38">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Source="logo" Width="200" Height="200" Margin="20" />
+        <Grid VerticalAlignment="Center" Background="White" Grid.Row="1" Margin="100" Padding="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBox x:Name="textUser" Grid.Row="0" PlaceholderText="Username" Margin="8" />
+            <PasswordBox x:Name="textPassword" Grid.Row="1" PlaceholderText="Password" Margin="8" />
+            <CheckBox x:Name="ckbRemember" Margin="8" Grid.Row="2"  Content="Remember"/>
+            <Grid Grid.Row="3" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Name="btnLogin" Grid.Column="0" Content="Login" Margin="8" Background="#1cb3bc" 
+                        Foreground="white" HorizontalAlignment="Stretch" Click="btnLogin_Click"/>
+                <Button Name="btnRegister" Grid.Column="1" Content="Register" Margin="8" Background="#d32424" 
+                        Foreground="white" HorizontalAlignment="Stretch" Click="btnRegister_Click"/>
+                
+            </Grid>
+        </Grid>
 
     </Grid>
 </Page>
